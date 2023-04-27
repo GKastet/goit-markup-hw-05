@@ -106,7 +106,11 @@ img {
 }
 
 .site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav .link:focus,
+.addr-link:hover,
+.addr-link:focus,
+.customers-link:hover,
+.customers-link:focus {
   color: var(--ocean);
 }
 .site-nav .link.current {
@@ -126,10 +130,10 @@ img {
   letter-spacing: 0.02em;
   color: var(--slate);
 }
-.addr-link:hover,
+/* .addr-link:hover,
 .addr-link:focus {
   color: var(--ocean);
-}
+} */
 
 /* Hero */
 
@@ -437,7 +441,7 @@ img {
 .customers-link:hover,
 .customers-link:focus {
   border: 1px solid var(--ocean);
-  color: var(--ocean);
+  /* color: var(--ocean); */
 }
 .customers-link {
   width: 100%;
