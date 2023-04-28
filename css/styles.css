@@ -28,8 +28,9 @@ html {
 body {
   font-family: Roboto, sans-serif;
   background-color: var(--white);
-  color: var(--slate);
+  color: var(--slate);  
 }
+
 h1,
 h2,
 h3,
@@ -110,14 +111,16 @@ img {
   position: relative;
   padding-top: 24px;
   padding-bottom: 24px;
+
+  transition: color var(--animation-time) var(--animation-cubic);
 }
-.header-nav-link::after {
+.header-active.header-nav-link::after {
   content: '';
 
   position: absolute;
   left: 0;
   /* top: 0; */
-  bottom: 0;
+  bottom: -3px;
   display: block;
   width: 100%;
   height: 4px;
@@ -141,6 +144,10 @@ img {
 /* .header-site-nav .link.current {
   color: var(--ocean);
 } */
+
+/* .header-nav-active {
+
+} */
 .address {
   margin-left: auto;
   font-style: normal;
@@ -154,6 +161,8 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
+
+  transition: color var(--animation-time) var(--animation-cubic);
 }
 
 /* Hero */
@@ -193,11 +202,14 @@ img {
   width: 100%;
   height: 100%;
   background: rgba(46, 47, 66, 0.4);
+
+  transition: opacity var(--animation-time) var(--animation-cubic);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  
 }
 .modal {
   position: absolute;
@@ -236,6 +248,8 @@ img {
 
   color: var(--white);
   background-color: var(--iris);
+  transition: background-color var(--animation-time) var(--animation-cubic),
+  box-shadow var(--animation-time) var(--animation-cubic);
 }
 .button.btn-secondary {
   padding: 12px 24px;
@@ -248,6 +262,7 @@ img {
 
   transition: color var(--animation-time) var(--animation-cubic),
     background-color var(--animation-time) var(--animation-cubic),
+    border var(--animation-time) var(--animation-cubic)
     box-shadow var(--animation-time) var(--animation-cubic);
 
   /* transition-property: color, background-color;
@@ -284,9 +299,20 @@ img {
   padding: 8px;
   border-radius: 50%;
 
+  fill: var(--navy-blue);
   background-color: var(--cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+
+  transition: fill var(--animation-time) var(--animation-cubic),
+  background-color var(--animation-time) var(--animation-cubic);
+  
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  fill: var(--white);
+  background-color: var(--ocean);
 }
 
 /* Section*/
@@ -424,6 +450,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color var(--animation-time) var(--animation-cubic);
 }
 
 .social-link:hover,
@@ -475,7 +502,8 @@ img {
  
 }
 .filter-link {
-  display: block;    
+  display: block;
+  transition: box-shadow(--animation-time) var(--animation-cubic);    
 }
 
 .filter-thumb {
@@ -588,11 +616,7 @@ opacity: 0.9;
   width: calc((100% - 120px) / 6);
   height: 88px;
 }
-.customers-link:hover,
-.customers-link:focus {
-  border: 1px solid var(--ocean);
-  /* color: var(--ocean); */
-}
+
 .customers-link {
   width: 100%;
   height: 100%;
@@ -602,12 +626,23 @@ opacity: 0.9;
   align-items: center;
   justify-content: center;
   color: var(--light-slate);
+
+  transition: border var(--animation-time) var(--animation-cubic),
+  color var(--animation-time) var(--animation-cubic);
 }
+
+.customers-link:hover,
+.customers-link:focus {
+  border: 1px solid var(--ocean);
+ 
+}
+
 .customers-logo {
   display: inline-block;
   width: 104px;
   height: 56px;
   fill: currentColor;
+  transition: fill var(--animation-time) var(--animation-cubic);
 }
 
 .customers-logo:hover,
