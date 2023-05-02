@@ -19,6 +19,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .modal {
+        opacity: 0;
+      }
+    </style>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
@@ -31,13 +36,11 @@
             target="_blank"
             rel="noopener norefferer"
             class="logo link"
-            >Web<span class="logo-studio">Studio</span></a
-          >
+            >Web<span class="logo-studio">Studio</span>
+          </a>
           <ul class="header-site-nav list">
             <li class="header-nav-item">
-              <a
-                href="./index.html"
-                class="header-nav-link header-active link"
+              <a href="./index.html" class="header-nav-link header-active link"
                 >Studio</a
               >
             </li>
@@ -81,11 +84,89 @@
       <!-- Modal window -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          
+          <p class="modal-title">
+            Leave your contacts and we will call you back
+          </p>
+          <form class="modal-info">
+            <label class="modal-label" for="name">
+              <span class="modal-item">Name</span>
+              <span class="modal-input-wrapper">
+                <input class="modal-input" type="text" name="name" id="name" />
+                <svg class="modal-svg" width="18" height="24">
+                  <use href="./images/icons.svg#icon-person"></use>
+                </svg>
+              </span>
+            </label>
+
+            <label class="modal-label" for="tel">
+              <span class="modal-item">Phone</span>
+              <span class="modal-input-wrapper">
+                <input
+                  class="modal-input"
+                  type="tel"
+                  name="Phone_number"
+                  id="tel"
+                />
+                <svg class="modal-svg" width="18" height="24">
+                  <use class="" href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </span>
+            </label>
+
+            <label class="modal-label" for="email">
+              <span class="modal-item">Email</span>
+              <span class="modal-input-wrapper">
+                <input
+                  class="modal-input"
+                  type="email"
+                  name="E-mail"
+                  id="email"
+                />
+                <svg class="modal-svg" width="18" height="24">
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+              </span>
+            </label>
+
+            <label class="modal-label-comment" for="comment">
+              <span class="modal-item">Comment</span>
+              <textarea
+                class="modal-input textarea"
+                name="comment"
+                id="comment"
+                placeholder="Text input"
+              >
+              </textarea>
+            </label>
+
+            <input class="checkbox visually-hidden" type="checkbox" name="checkbox" />
+            <label class="modal-policy" for="checkbox">              
+              <span class="modal-checkbox">
+                <svg class="modal-checkbox-svg" width="10" height="8">
+                  <use href="./images/icons.svg#icon-confirm"></use>
+                </svg>
+              </span>
+              
+              <!-- <span class="modal-policytext"> -->
+                I accept the terms and conditions of the
+              <!-- </span> -->
+              <span>
+                <a
+                  class="modal-policylink"
+                  href="#"
+                  target="_blank"
+                  rel="noopener norefferer"
+                >
+                  Privacy Policy
+                </a>
+              </span>
+            </label>
+            <button class="modal-btn-send" type="submit">Send</button>
+          </form>
+
           <button class="btn-close" type="button" data-modal-close>
             <svg widht="8" height="8">
-              <use href="./images/icons.svg#icon-close">
-              </use>
+              <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
         </div>
@@ -464,6 +545,28 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div>
+          <p class="footer-social-title">Subscribe</p>
+          <form class="footer-subscribe" action="">
+            <label class="" for="user_email">
+              <input
+                class="footer-subscribe-input"
+                type="user_email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="footer-subscribe-btn" type="submit">
+              Suscribe
+              <svg width="24" height="24">
+                <use
+                  class="footer-airplane"
+                  href="./images/icons.svg#icon-airplane"
+                ></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
